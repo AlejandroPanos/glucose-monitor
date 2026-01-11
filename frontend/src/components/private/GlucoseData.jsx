@@ -21,11 +21,11 @@ const GlucoseData = () => {
     return <ErrorComp />;
   }
 
-  const totalLogs = logsQuery.data.length;
-  const glucoseSum = logsQuery.data.reduce((sum, log) => sum + log.glucoseLevel, 0);
+  const totalLogs = logsQuery.data.logs.length;
+  const glucoseSum = logsQuery.data.logs.reduce((sum, log) => sum + log.glucoseLevel, 0);
   const averageGlucose = parseInt(glucoseSum / totalLogs);
   const estimatedHbA1c = parseFloat(((averageGlucose + 46.7) / 28.7).toFixed(1));
-  const logsInRange = logsQuery.data.filter(
+  const logsInRange = logsQuery.data.logs.filter(
     (log) =>
       log.glucoseLevel >= user.targetGlucose.min && log.glucoseLevel <= user.targetGlucose.max
   ).length;

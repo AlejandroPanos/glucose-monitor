@@ -8,8 +8,26 @@ const Meal = require("../models/meal");
 exports.getMeals = async (req, res) => {
   try {
     const userId = req.user.id;
-    const meals = await Meal.find({ userId }).sort({ createdAt: -1 });
-    res.status(200).json(meals);
+
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
+    const skip = (page - 1) * limit;
+
+    const totalMeals = await Meal.countDocuments({ userId });
+
+    const meals = await Meal.find({ userId }).sort({ createdAt: -1 }).skip(skip).limit(limit);
+
+    res.status(200).json({
+      meals,
+      pagination: {
+        currentPage: page,
+        totalPages: Math.ceil(totalMeals / limit),
+        totalMeals,
+        mealsPerPage: limit,
+        hasNextPage: page < Math.ceil(totalMeals / limit),
+        hasPrevPage: page > 1,
+      },
+    });
   } catch (error) {
     console.error(error.message);
     res.status(500).json({ error: error.message });

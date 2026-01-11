@@ -127,7 +127,7 @@ const LogForm = () => {
               </option>
 
               {mealsQuery.data &&
-                mealsQuery.data.map((meal) => (
+                mealsQuery.data.meals.map((meal) => (
                   <option key={meal._id} value={meal._id}>
                     {meal.name}
                   </option>

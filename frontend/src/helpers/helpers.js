@@ -45,8 +45,9 @@ export const userLogout = async () => {
 };
 
 //Action helpers
-export const userMeals = async () => {
-  const response = await axios.get("/api/meals");
+// * === MEALS === *
+export const userMeals = async (page = 1, limit = 10) => {
+  const response = await axios.get(`/api/meals?page=${page}&limit=${limit}`);
   return response.data;
 };
 
@@ -70,8 +71,9 @@ export const deleteMeal = async (id) => {
   return response.data;
 };
 
-export const userLogs = async () => {
-  const response = await axios.get("/api/logs");
+// * === LOGS === *
+export const userLogs = async (page = 1, limit = 10) => {
+  const response = await axios.get(`/api/logs?page=${page}&limit=${limit}`);
   return response.data;
 };
 

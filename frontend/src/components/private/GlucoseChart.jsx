@@ -15,7 +15,6 @@ import Loading from "../states/Loading";
 import ErrorComp from "../states/ErrorComp";
 import Empty from "../states/Empty";
 
-// ! Timestamps aren't unique in seeding, so tooltip shows the same data
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
     return (
@@ -42,20 +41,23 @@ const GlucoseChart = () => {
     return <ErrorComp />;
   }
 
-  const data = logsQuery.data
+  const data = logsQuery.data.logs
     .slice(-10)
-    .map((log) => ({
+    .map((log, index) => ({
+      id: log._id,
       date: format(new Date(log.date), "dd/MM"),
+      fullDate: format(new Date(log.date), "dd/MM HH:mm"),
       glucose: log.glucoseLevel,
+      index: index,
     }))
     .reverse();
 
   return (
     <>
       {data.length > 0 ? (
-        <div className="w-full h-80">
+        <div className="w-full h-88">
           <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
+            <LineChart data={data} margin={{ top: 5, right: 20, bottom: 15, left: 0 }}>
               <Line
                 type="monotone"
                 dataKey="glucose"
@@ -66,9 +68,12 @@ const GlucoseChart = () => {
               />
               <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
               <XAxis
-                dataKey="date"
+                dataKey="fullDate"
                 tick={{ fill: "#6b7280", fontSize: 12 }}
                 tickLine={{ stroke: "#e5e7eb" }}
+                angle={-45}
+                textAnchor="end"
+                height={60}
               />
               <YAxis
                 domain={["dataMin - 10", "dataMax + 10"]}

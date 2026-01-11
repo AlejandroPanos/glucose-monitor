@@ -8,11 +8,30 @@ const Meal = require("../models/meal");
 exports.getLogs = async (req, res) => {
   try {
     const userId = req.user.id;
+
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
+    const skip = (page - 1) * limit;
+
+    const totalLogs = await Log.countDocuments({ userId });
+
     const logs = await Log.find({ userId })
       .populate("mealId", "name carbsPerServing servingSize")
-      .sort({ date: -1 });
+      .sort({ date: -1 })
+      .skip(skip)
+      .limit(limit);
 
-    res.status(200).json(logs);
+    res.status(200).json({
+      logs,
+      pagination: {
+        currentPage: page,
+        totalPages: Math.ceil(totalLogs / limit),
+        totalLogs,
+        logsPerPage: limit,
+        hasNextPage: page < Math.ceil(totalLogs / limit),
+        hasPrevPage: page > 1,
+      },
+    });
   } catch (error) {
     console.error(error.message);
     res.status(500).json({ error: error.message });
