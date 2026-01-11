@@ -1,0 +1,12 @@
+name,email,password,age,diabetesType,targetMin,targetMax,role
+John Smith,john@test.com,password123,45,type2,70,180,user
+Mary Johnson,mary@test.com,password123,32,type1,80,140,user
+Peter Williams,peter@test.com,password123,58,type2,70,180,user
+Anna Brown,anna@test.com,password123,28,gestational,70,120,user
+Charles Davis,charles@test.com,password123,51,type2,70,180,user
+Laura Martinez,laura@test.com,password123,39,type1,80,140,user
+Michael Wilson,michael@test.com,password123,63,type2,70,180,user
+Isabella Garcia,isabella@test.com,password123,25,prediabetes,70,100,user
+James Rodriguez,james@test.com,password123,47,type2,70,180,user
+Emma Lopez,emma@test.com,password123,35,type1,80,140,user
+Admin User,admin@test.com,admin123,40,type2,70,180,admin

@@ -1,0 +1,101 @@
+userEmail,name,category,carbsPerServing,servingSize
+john@test.com,White rice,lunch,45,100g
+john@test.com,Grilled chicken,lunch,0,150g
+john@test.com,Mixed salad,lunch,5,100g
+john@test.com,Apple,snack,25,1 unit
+john@test.com,Whole wheat bread,breakfast,15,1 slice
+john@test.com,Plain yogurt,snack,17,125g
+john@test.com,Whole wheat pasta,lunch,65,100g
+john@test.com,Banana,snack,27,1 unit
+john@test.com,Skim milk,breakfast,12,200ml
+john@test.com,Boiled egg,breakfast,1,1 unit
+mary@test.com,Oatmeal,breakfast,60,50g
+mary@test.com,Strawberries,snack,8,100g
+mary@test.com,Salmon,dinner,0,150g
+mary@test.com,Broccoli,dinner,7,100g
+mary@test.com,Quinoa,lunch,21,100g
+mary@test.com,Almonds,snack,9,30g
+mary@test.com,Tomato,lunch,4,100g
+mary@test.com,Avocado,lunch,9,100g
+mary@test.com,Turkey,lunch,0,100g
+mary@test.com,Asparagus,dinner,4,100g
+peter@test.com,Lentils,lunch,20,100g
+peter@test.com,Carrot,snack,10,100g
+peter@test.com,Orange,snack,12,1 unit
+peter@test.com,Tuna,lunch,0,100g
+peter@test.com,Lettuce,lunch,2,100g
+peter@test.com,French omelette,dinner,2,2 eggs
+peter@test.com,Zucchini,dinner,3,100g
+peter@test.com,Hake,dinner,0,150g
+peter@test.com,Bell pepper,lunch,6,100g
+peter@test.com,Black coffee,breakfast,0,1 cup
+anna@test.com,Whole wheat toast,breakfast,30,2 slices
+anna@test.com,Fresh cheese,breakfast,2,50g
+anna@test.com,Kiwi,snack,15,1 unit
+anna@test.com,Chickpeas,lunch,27,100g
+anna@test.com,Chicken breast,lunch,0,150g
+anna@test.com,Green beans,dinner,7,100g
+anna@test.com,Tangerine,snack,13,1 unit
+anna@test.com,Green tea,breakfast,0,1 cup
+anna@test.com,Cucumber,snack,4,100g
+anna@test.com,Eggplant,dinner,6,100g
+charles@test.com,White bread,breakfast,50,100g
+charles@test.com,Serrano ham,breakfast,0,50g
+charles@test.com,Olive oil,lunch,0,10ml
+charles@test.com,Red wine,dinner,4,100ml
+charles@test.com,Beer,dinner,13,330ml
+charles@test.com,Pizza,dinner,30,1 slice
+charles@test.com,Dark chocolate,snack,30,30g
+charles@test.com,Potato chips,snack,15,30g
+charles@test.com,Soda,lunch,35,330ml
+charles@test.com,Ice cream,snack,25,100g
+laura@test.com,Protein shake,breakfast,5,30g
+laura@test.com,Spinach,lunch,1,100g
+laura@test.com,Tofu,dinner,2,100g
+laura@test.com,Blueberries,snack,14,100g
+laura@test.com,Walnuts,snack,7,30g
+laura@test.com,Cabbage,lunch,6,100g
+laura@test.com,Mushrooms,dinner,3,100g
+laura@test.com,Greek yogurt,snack,4,150g
+laura@test.com,Pear,snack,15,1 unit
+laura@test.com,Onion,lunch,9,100g
+michael@test.com,Vegetable soup,dinner,10,250ml
+michael@test.com,Sardines,lunch,0,100g
+michael@test.com,Chard,dinner,1,100g
+michael@test.com,Quince paste,snack,60,50g
+michael@test.com,Whole grain crackers,snack,70,100g
+michael@test.com,Jam,breakfast,55,20g
+michael@test.com,Honey,breakfast,82,20g
+michael@test.com,Whole grain cereal,breakfast,75,50g
+michael@test.com,Chicken broth,dinner,2,250ml
+michael@test.com,Peach,snack,12,1 unit
+isabella@test.com,Watermelon,snack,8,100g
+isabella@test.com,Cantaloupe,snack,8,100g
+isabella@test.com,Pineapple,snack,13,100g
+isabella@test.com,Papaya,snack,11,100g
+isabella@test.com,Mango,snack,15,100g
+isabella@test.com,Grapes,snack,18,100g
+isabella@test.com,Plums,snack,11,100g
+isabella@test.com,Figs,snack,19,100g
+isabella@test.com,Dates,snack,75,100g
+isabella@test.com,Raisins,snack,79,100g
+james@test.com,Cod,dinner,0,150g
+james@test.com,Squid,dinner,3,100g
+james@test.com,Octopus,dinner,2,100g
+james@test.com,Shrimp,dinner,1,100g
+james@test.com,Mussels,dinner,7,100g
+james@test.com,Cuttlefish,dinner,1,100g
+james@test.com,Monkfish,dinner,1,100g
+james@test.com,Sea bass,dinner,0,150g
+james@test.com,Sea bream,dinner,0,150g
+james@test.com,Trout,dinner,0,150g
+emma@test.com,Oat pancakes,breakfast,55,2 units
+emma@test.com,Peanut butter,breakfast,20,30g
+emma@test.com,Rye bread,breakfast,45,100g
+emma@test.com,Aged cheese,snack,2,50g
+emma@test.com,Ham,breakfast,1,50g
+emma@test.com,Turkey breast,lunch,1,100g
+emma@test.com,Chicken sausages,dinner,3,100g
+emma@test.com,Burger,dinner,30,1 unit
+emma@test.com,Kebab,dinner,45,1 unit
+emma@test.com,Falafel,lunch,18,100g

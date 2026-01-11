@@ -1,0 +1,201 @@
+userEmail,type,glucoseLevel,mealName,notes,date
+john@test.com,fasting,98,,Normal,2024-12-20T08:00:00Z
+john@test.com,after_meal,125,Whole wheat bread,Light breakfast,2024-12-20T09:00:00Z
+john@test.com,before_meal,110,,,2024-12-20T14:00:00Z
+john@test.com,after_meal,145,White rice,Full lunch,2024-12-20T15:30:00Z
+john@test.com,random,115,,,2024-12-20T18:00:00Z
+john@test.com,after_meal,135,Whole wheat pasta,Light dinner,2024-12-20T21:00:00Z
+john@test.com,bedtime,105,,Good,2024-12-20T23:00:00Z
+john@test.com,fasting,95,,,2024-12-21T08:00:00Z
+john@test.com,after_meal,155,White rice,Ate too much,2024-12-21T15:00:00Z
+john@test.com,after_meal,130,Mixed salad,,2024-12-21T21:00:00Z
+mary@test.com,fasting,85,,,2024-12-20T07:30:00Z
+mary@test.com,after_meal,110,Oatmeal,Healthy breakfast,2024-12-20T09:00:00Z
+mary@test.com,after_meal,140,Quinoa,,2024-12-20T14:30:00Z
+mary@test.com,after_meal,125,Salmon,Protein dinner,2024-12-20T20:00:00Z
+mary@test.com,bedtime,95,,,2024-12-20T22:30:00Z
+mary@test.com,fasting,80,,Perfect,2024-12-21T07:30:00Z
+mary@test.com,after_meal,115,Strawberries,,2024-12-21T10:00:00Z
+mary@test.com,after_meal,135,Quinoa,,2024-12-21T15:00:00Z
+mary@test.com,random,105,Almonds,Snack,2024-12-21T17:00:00Z
+mary@test.com,after_meal,120,Broccoli,,2024-12-21T21:00:00Z
+peter@test.com,fasting,105,,A bit high,2024-12-20T08:30:00Z
+peter@test.com,after_meal,160,Lentils,,2024-12-20T14:00:00Z
+peter@test.com,after_meal,140,Hake,,2024-12-20T20:00:00Z
+peter@test.com,fasting,100,,,2024-12-21T08:30:00Z
+peter@test.com,before_meal,115,,,2024-12-21T12:00:00Z
+peter@test.com,after_meal,165,Lentils,Very hungry,2024-12-21T14:30:00Z
+peter@test.com,before_meal,120,,,2024-12-21T19:00:00Z
+peter@test.com,after_meal,135,French omelette,,2024-12-21T21:00:00Z
+peter@test.com,bedtime,110,,,2024-12-21T23:00:00Z
+peter@test.com,fasting,102,,,2024-12-22T08:30:00Z
+anna@test.com,fasting,88,,Great,2024-12-20T08:00:00Z
+anna@test.com,after_meal,105,Whole wheat toast,,2024-12-20T09:30:00Z
+anna@test.com,after_meal,115,Chickpeas,,2024-12-20T14:00:00Z
+anna@test.com,random,100,Kiwi,,2024-12-20T17:00:00Z
+anna@test.com,after_meal,110,Green beans,,2024-12-20T20:30:00Z
+anna@test.com,fasting,85,,,2024-12-21T08:00:00Z
+anna@test.com,after_meal,100,Whole wheat toast,,2024-12-21T10:00:00Z
+anna@test.com,after_meal,120,Chicken breast,,2024-12-21T15:00:00Z
+anna@test.com,random,95,Tangerine,,2024-12-21T18:00:00Z
+anna@test.com,after_meal,105,Green beans,,2024-12-21T21:00:00Z
+charles@test.com,fasting,115,,A bit high,2024-12-20T09:00:00Z
+charles@test.com,after_meal,145,White bread,,2024-12-20T10:00:00Z
+charles@test.com,after_meal,175,Pizza,Excess,2024-12-20T15:00:00Z
+charles@test.com,bedtime,140,,,2024-12-20T22:00:00Z
+charles@test.com,fasting,120,,,2024-12-21T09:00:00Z
+charles@test.com,after_meal,180,Pizza,Again...,2024-12-21T16:00:00Z
+charles@test.com,random,150,Dark chocolate,,2024-12-21T18:00:00Z
+charles@test.com,bedtime,145,,Bad day,2024-12-21T22:30:00Z
+charles@test.com,fasting,118,,,2024-12-22T09:00:00Z
+charles@test.com,after_meal,165,White bread,,2024-12-22T15:00:00Z
+laura@test.com,fasting,82,,Excellent,2024-12-20T07:00:00Z
+laura@test.com,after_meal,105,Protein shake,,2024-12-20T08:30:00Z
+laura@test.com,after_meal,115,Tofu,,2024-12-20T13:00:00Z
+laura@test.com,random,95,Blueberries,,2024-12-20T16:00:00Z
+laura@test.com,after_meal,110,Spinach,,2024-12-20T20:00:00Z
+laura@test.com,fasting,80,,,2024-12-21T07:00:00Z
+laura@test.com,after_meal,100,Greek yogurt,,2024-12-21T09:00:00Z
+laura@test.com,after_meal,120,Tofu,,2024-12-21T14:00:00Z
+laura@test.com,random,90,Walnuts,,2024-12-21T17:00:00Z
+laura@test.com,after_meal,105,Mushrooms,,2024-12-21T21:00:00Z
+michael@test.com,fasting,110,,,2024-12-20T08:00:00Z
+michael@test.com,after_meal,140,Whole grain cereal,,2024-12-20T09:30:00Z
+michael@test.com,after_meal,155,Sardines,,2024-12-20T14:00:00Z
+michael@test.com,after_meal,135,Vegetable soup,,2024-12-20T20:00:00Z
+michael@test.com,bedtime,115,,,2024-12-20T23:00:00Z
+michael@test.com,fasting,108,,,2024-12-21T08:00:00Z
+michael@test.com,after_meal,135,Whole grain crackers,,2024-12-21T10:00:00Z
+michael@test.com,after_meal,160,Sardines,,2024-12-21T15:00:00Z
+michael@test.com,after_meal,140,Chicken broth,,2024-12-21T21:00:00Z
+michael@test.com,bedtime,120,,,2024-12-21T23:00:00Z
+isabella@test.com,fasting,92,,,2024-12-20T08:00:00Z
+isabella@test.com,random,100,Watermelon,,2024-12-20T11:00:00Z
+isabella@test.com,after_meal,110,Cantaloupe,,2024-12-20T14:00:00Z
+isabella@test.com,random,95,Pineapple,,2024-12-20T17:00:00Z
+isabella@test.com,after_meal,105,Papaya,,2024-12-20T20:00:00Z
+isabella@test.com,fasting,90,,Perfect,2024-12-21T08:00:00Z
+isabella@test.com,random,98,Mango,,2024-12-21T12:00:00Z
+isabella@test.com,after_meal,115,Grapes,,2024-12-21T15:00:00Z
+isabella@test.com,random,100,Plums,,2024-12-21T18:00:00Z
+isabella@test.com,after_meal,108,Figs,,2024-12-21T21:00:00Z
+james@test.com,fasting,100,,,2024-12-20T08:30:00Z
+james@test.com,after_meal,135,Cod,,2024-12-20T14:30:00Z
+james@test.com,after_meal,125,Squid,,2024-12-20T20:30:00Z
+james@test.com,fasting,98,,,2024-12-21T08:30:00Z
+james@test.com,after_meal,140,Octopus,,2024-12-21T15:00:00Z
+james@test.com,random,110,,,2024-12-21T18:00:00Z
+james@test.com,after_meal,130,Shrimp,,2024-12-21T21:00:00Z
+james@test.com,bedtime,105,,,2024-12-21T23:00:00Z
+james@test.com,fasting,95,,Good,2024-12-22T08:30:00Z
+james@test.com,after_meal,145,Mussels,,2024-12-22T15:00:00Z
+emma@test.com,fasting,88,,,2024-12-20T07:30:00Z
+emma@test.com,after_meal,115,Oat pancakes,,2024-12-20T09:00:00Z
+emma@test.com,after_meal,130,Falafel,,2024-12-20T14:00:00Z
+emma@test.com,after_meal,120,Turkey breast,,2024-12-20T20:00:00Z
+emma@test.com,bedtime,100,,,2024-12-20T23:00:00Z
+emma@test.com,fasting,85,,,2024-12-21T07:30:00Z
+emma@test.com,after_meal,110,Rye bread,,2024-12-21T10:00:00Z
+emma@test.com,after_meal,135,Burger,,2024-12-21T15:00:00Z
+emma@test.com,random,105,Aged cheese,,2024-12-21T18:00:00Z
+emma@test.com,after_meal,125,Chicken sausages,,2024-12-21T21:00:00Z
+john@test.com,fasting,100,,,2024-12-22T08:00:00Z
+john@test.com,after_meal,150,Whole wheat pasta,,2024-12-22T15:00:00Z
+john@test.com,after_meal,140,Grilled chicken,,2024-12-22T21:00:00Z
+john@test.com,fasting,96,,,2024-12-23T08:00:00Z
+john@test.com,after_meal,120,Apple,,2024-12-23T10:00:00Z
+john@test.com,after_meal,155,White rice,Family meal,2024-12-23T15:00:00Z
+john@test.com,random,125,Plain yogurt,,2024-12-23T17:00:00Z
+john@test.com,after_meal,145,Whole wheat pasta,,2024-12-23T21:00:00Z
+john@test.com,bedtime,110,,,2024-12-23T23:00:00Z
+john@test.com,fasting,102,,,2024-12-24T08:00:00Z
+mary@test.com,fasting,83,,,2024-12-22T07:30:00Z
+mary@test.com,after_meal,108,Oatmeal,,2024-12-22T10:00:00Z
+mary@test.com,after_meal,138,Quinoa,,2024-12-22T15:00:00Z
+mary@test.com,after_meal,118,Salmon,,2024-12-22T21:00:00Z
+mary@test.com,fasting,78,,Very good,2024-12-23T07:30:00Z
+mary@test.com,random,95,Strawberries,,2024-12-23T11:00:00Z
+mary@test.com,after_meal,142,Turkey,,2024-12-23T16:00:00Z
+mary@test.com,after_meal,122,Broccoli,,2024-12-23T22:00:00Z
+mary@test.com,fasting,82,,,2024-12-24T07:30:00Z
+mary@test.com,after_meal,145,Quinoa,,2024-12-24T15:00:00Z
+peter@test.com,fasting,108,,,2024-12-22T08:30:00Z
+peter@test.com,after_meal,170,Lentils,Excess,2024-12-22T15:00:00Z
+peter@test.com,after_meal,142,Tuna,,2024-12-22T21:00:00Z
+peter@test.com,fasting,112,,High,2024-12-23T08:30:00Z
+peter@test.com,after_meal,158,Lentils,,2024-12-23T14:00:00Z
+peter@test.com,after_meal,138,Hake,,2024-12-23T20:00:00Z
+peter@test.com,fasting,106,,,2024-12-24T08:30:00Z
+peter@test.com,before_meal,118,,,2024-12-24T12:00:00Z
+peter@test.com,after_meal,165,Lentils,,2024-12-24T15:00:00Z
+peter@test.com,bedtime,125,,,2024-12-24T22:00:00Z
+anna@test.com,fasting,86,,,2024-12-22T08:00:00Z
+anna@test.com,after_meal,102,Whole wheat toast,,2024-12-22T10:00:00Z
+anna@test.com,after_meal,118,Chickpeas,,2024-12-22T15:00:00Z
+anna@test.com,after_meal,108,Chicken breast,,2024-12-22T21:00:00Z
+anna@test.com,fasting,84,,,2024-12-23T08:00:00Z
+anna@test.com,random,98,Kiwi,,2024-12-23T11:00:00Z
+anna@test.com,after_meal,116,Chickpeas,,2024-12-23T16:00:00Z
+anna@test.com,after_meal,106,Green beans,,2024-12-23T22:00:00Z
+anna@test.com,fasting,87,,,2024-12-24T08:00:00Z
+anna@test.com,after_meal,122,Chicken breast,,2024-12-24T15:00:00Z
+charles@test.com,fasting,122,,Bad,2024-12-22T09:00:00Z
+charles@test.com,after_meal,185,Pizza,Party,2024-12-22T16:00:00Z
+charles@test.com,bedtime,155,,Very bad,2024-12-22T23:00:00Z
+charles@test.com,fasting,125,,,2024-12-23T09:00:00Z
+charles@test.com,random,135,Potato chips,,2024-12-23T11:00:00Z
+charles@test.com,after_meal,190,Pizza,Christmas,2024-12-23T17:00:00Z
+charles@test.com,fasting,128,,,2024-12-24T09:00:00Z
+charles@test.com,random,145,Ice cream,,2024-12-24T12:00:00Z
+charles@test.com,after_meal,195,Burger,,2024-12-24T18:00:00Z
+charles@test.com,bedtime,160,,Terrible,2024-12-24T23:00:00Z
+laura@test.com,fasting,81,,,2024-12-22T07:00:00Z
+laura@test.com,after_meal,102,Protein shake,,2024-12-22T09:00:00Z
+laura@test.com,after_meal,118,Tofu,,2024-12-22T14:00:00Z
+laura@test.com,after_meal,108,Spinach,,2024-12-22T21:00:00Z
+laura@test.com,fasting,79,,,2024-12-23T07:00:00Z
+laura@test.com,after_meal,98,Greek yogurt,,2024-12-23T10:00:00Z
+laura@test.com,after_meal,122,Tofu,,2024-12-23T15:00:00Z
+laura@test.com,after_meal,106,Mushrooms,,2024-12-23T22:00:00Z
+laura@test.com,fasting,82,,,2024-12-24T07:00:00Z
+laura@test.com,after_meal,120,Cabbage,,2024-12-24T14:00:00Z
+michael@test.com,fasting,112,,,2024-12-22T08:00:00Z
+michael@test.com,after_meal,138,Whole grain cereal,,2024-12-22T10:00:00Z
+michael@test.com,after_meal,162,Sardines,,2024-12-22T15:00:00Z
+michael@test.com,bedtime,125,,,2024-12-22T22:00:00Z
+michael@test.com,fasting,110,,,2024-12-23T08:00:00Z
+michael@test.com,random,120,Quince paste,,2024-12-23T11:00:00Z
+michael@test.com,after_meal,165,Sardines,,2024-12-23T16:00:00Z
+michael@test.com,bedtime,128,,,2024-12-23T23:00:00Z
+michael@test.com,fasting,115,,,2024-12-24T08:00:00Z
+michael@test.com,after_meal,168,Whole grain crackers,,2024-12-24T15:00:00Z
+isabella@test.com,fasting,91,,,2024-12-22T08:00:00Z
+isabella@test.com,random,102,Watermelon,,2024-12-22T12:00:00Z
+isabella@test.com,after_meal,112,Cantaloupe,,2024-12-22T16:00:00Z
+isabella@test.com,after_meal,106,Papaya,,2024-12-22T22:00:00Z
+isabella@test.com,fasting,89,,,2024-12-23T08:00:00Z
+isabella@test.com,random,100,Pineapple,,2024-12-23T13:00:00Z
+isabella@test.com,after_meal,118,Mango,,2024-12-23T17:00:00Z
+isabella@test.com,bedtime,102,,,2024-12-23T23:00:00Z
+isabella@test.com,fasting,92,,,2024-12-24T08:00:00Z
+isabella@test.com,after_meal,120,Grapes,,2024-12-24T16:00:00Z
+james@test.com,fasting,96,,,2024-12-22T08:30:00Z
+james@test.com,after_meal,142,Cod,,2024-12-22T15:00:00Z
+james@test.com,after_meal,128,Sea bass,,2024-12-22T22:00:00Z
+james@test.com,fasting,99,,,2024-12-23T08:30:00Z
+james@test.com,after_meal,148,Monkfish,,2024-12-23T16:00:00Z
+james@test.com,bedtime,108,,,2024-12-23T23:00:00Z
+james@test.com,fasting,97,,,2024-12-24T08:30:00Z
+james@test.com,after_meal,138,Octopus,,2024-12-24T14:00:00Z
+james@test.com,random,115,,,2024-12-24T17:00:00Z
+james@test.com,after_meal,135,Sea bream,,2024-12-24T22:00:00Z
+emma@test.com,fasting,86,,,2024-12-22T07:30:00Z
+emma@test.com,after_meal,112,Oat pancakes,,2024-12-22T10:00:00Z
+emma@test.com,after_meal,138,Kebab,,2024-12-22T16:00:00Z
+emma@test.com,bedtime,105,,,2024-12-22T23:00:00Z
+emma@test.com,fasting,84,,,2024-12-23T07:30:00Z
+emma@test.com,random,98,Aged cheese,,2024-12-23T11:00:00Z
+emma@test.com,after_meal,142,Burger,,2024-12-23T17:00:00Z
+emma@test.com,fasting,88,,,2024-12-24T07:30:00Z
+emma@test.com,after_meal,108,Rye bread,,2024-12-24T10:00:00Z
+emma@test.com,after_meal,145,Falafel,,2024-12-24T16:00:00Z
