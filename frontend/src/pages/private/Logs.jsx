@@ -24,29 +24,25 @@ const Logs = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  if (logsQuery.isPending && !logsQuery.data) {
-    return <Loading />;
-  }
-
-  if (logsQuery.isError) {
-    return <ErrorComp />;
-  }
-
-  const { logs, pagination } = logsQuery.data;
-
   return (
     <>
       <div className="w-full mx-auto p-4 flex flex-col items-start gap-10">
         <PageBar />
         <PageHeader title="Logs" text="A complete record of your past readings and observations." />
-        <LogsGrid logs={logs} />
-        <PaginationButtons
-          currentPage={pagination.currentPage}
-          totalPages={pagination.totalPages}
-          hasNextPage={pagination.hasNextPage}
-          hasPrevPage={pagination.hasPrevPage}
-          onPageChange={handlePageChange}
-        />
+        {logsQuery.isPending && !logsQuery.data && <Loading />}
+        {logsQuery.isError && <ErrorComp />}
+        {logsQuery.data && (
+          <>
+            <LogsGrid logs={logsQuery.data.logs} />
+            <PaginationButtons
+              currentPage={logsQuery.data.pagination.currentPage}
+              totalPages={logsQuery.data.pagination.totalPages}
+              hasNextPage={logsQuery.data.pagination.hasNextPage}
+              hasPrevPage={logsQuery.data.pagination.hasPrevPage}
+              onPageChange={handlePageChange}
+            />
+          </>
+        )}
       </div>
     </>
   );

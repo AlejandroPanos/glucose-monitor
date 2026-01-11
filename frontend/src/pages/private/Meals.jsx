@@ -24,29 +24,25 @@ const Meals = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  if (mealsQuery.isPending && !mealsQuery.data) {
-    return <Loading />;
-  }
-
-  if (mealsQuery.isError) {
-    return <ErrorComp />;
-  }
-
-  const { meals, pagination } = mealsQuery.data;
-
   return (
     <>
       <div className="w-full mx-auto p-4 flex flex-col items-start gap-10">
         <PageBar />
         <PageHeader title="Meals" text="Track how meals affect your blood sugar over time." />
-        <MealsGrid meals={meals} />
-        <PaginationButtons
-          currentPage={pagination.currentPage}
-          totalPages={pagination.totalPages}
-          hasNextPage={pagination.hasNextPage}
-          hasPrevPage={pagination.hasPrevPage}
-          onPageChange={handlePageChange}
-        />
+        {mealsQuery.isPending && !mealsQuery.data && <Loading />}
+        {mealsQuery.isError && <ErrorComp />}
+        {mealsQuery.data && (
+          <>
+            <MealsGrid meals={mealsQuery.data.meals} />
+            <PaginationButtons
+              currentPage={mealsQuery.data.pagination.currentPage}
+              totalPages={mealsQuery.data.pagination.totalPages}
+              hasNextPage={mealsQuery.data.pagination.hasNextPage}
+              hasPrevPage={mealsQuery.data.pagination.hasPrevPage}
+              onPageChange={handlePageChange}
+            />
+          </>
+        )}
       </div>
     </>
   );

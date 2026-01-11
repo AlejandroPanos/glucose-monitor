@@ -24,7 +24,6 @@ export const checkAuth = async () => {
 };
 
 export const updateProfile = async (updatedUser) => {
-  console.log(updatedUser);
   const response = await axios.post("/api/auth/profile", updatedUser);
   return response.data;
 };
@@ -88,7 +87,6 @@ export const getLog = async (id) => {
 };
 
 export const editLog = async ({ id, updatedLog }) => {
-  console.log(updatedLog);
   const response = await axios.put(`/api/logs/${id}`, updatedLog);
   return response.data;
 };
