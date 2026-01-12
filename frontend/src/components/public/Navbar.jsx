@@ -18,14 +18,23 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
             <div className="flex items-center gap-6">
-              <a className="text-gray-700 hover:text-blue-600 font-medium transition-colors cursor-pointer">
-                Link
+              <a
+                href="#hero"
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors cursor-pointer"
+              >
+                Home
               </a>
-              <a className="text-gray-700 hover:text-blue-600 font-medium transition-colors cursor-pointer">
-                Link
+              <a
+                href="#features"
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors cursor-pointer"
+              >
+                Features
               </a>
-              <a className="text-gray-700 hover:text-blue-600 font-medium transition-colors cursor-pointer">
-                Link
+              <a
+                href="#faqs"
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors cursor-pointer"
+              >
+                FAQs
               </a>
             </div>
             <div className="flex items-center gap-3">
