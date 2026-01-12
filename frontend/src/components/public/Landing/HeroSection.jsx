@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { ArrowRight } from "lucide-react";
 
 import placeholderOne from "../../../images/placeholderOne.svg";
@@ -35,10 +36,13 @@ const HeroSection = () => {
           </div>
 
           <div>
-            <button className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 md:py-2.5 px-4 md:px-5 rounded-lg shadow-sm hover:shadow-md transition-all text-sm md:text-base active:scale-[0.98] hover:cursor-pointer">
+            <Link
+              to={"/register"}
+              className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 md:py-2.5 px-4 md:px-5 rounded-lg shadow-sm hover:shadow-md transition-all text-sm md:text-base active:scale-[0.98] hover:cursor-pointer"
+            >
               <p>Try it free</p>
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </Link>
           </div>
 
           <div className="w-full flex flex-col items-center gap-4 md:gap-6">
