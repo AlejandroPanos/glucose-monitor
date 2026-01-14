@@ -24,7 +24,7 @@ app.use(cookieParser());
 /* Configure CORS */
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://glucose-monitor-frontend.onrender.com",
     credentials: true,
   })
 );
