@@ -13,7 +13,7 @@ exports.postRegister = async (req, res) => {
 
     // Create token and cookie
     const token = createToken(user._id);
-    res.cookie("jwt", token, { maxAge, httpOnly: true });
+    res.cookie("jwt", token, { maxAge, httpOnly: true, secure: true, sameSite: "none" });
     res.status(200).json(user);
   } catch (error) {
     console.error(error.message);
@@ -28,7 +28,7 @@ exports.postLogin = async (req, res) => {
 
     // Create token and cookie
     const token = createToken(user._id);
-    res.cookie("jwt", token, { maxAge, httpOnly: true });
+    res.cookie("jwt", token, { maxAge, httpOnly: true, secure: true, sameSite: "none" });
     res.status(200).json(user);
   } catch (error) {
     console.error(error.message);
@@ -38,7 +38,7 @@ exports.postLogin = async (req, res) => {
 
 exports.postLogout = (req, res) => {
   try {
-    res.cookie("jwt", "", { maxAge: 1, httpOnly: true });
+    res.cookie("jwt", "", { maxAge: 1, httpOnly: true, secure: true, sameSite: "none" });
     res.status(200).json({ msg: "User logout" });
   } catch (error) {
     console.error(error.message);
