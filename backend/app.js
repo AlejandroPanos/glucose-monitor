@@ -26,8 +26,13 @@ app.use(
   cors({
     origin: "http://localhost:5173",
     credentials: true,
-  })
+  }),
 );
+
+/* Health check */
+app.get((req, res) => {
+  res.status(200).json({ status: ok });
+});
 
 /* Use routes */
 app.use(checkUser);
