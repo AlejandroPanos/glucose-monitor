@@ -62,13 +62,3 @@ GET    /api/logs/:id
 PUT    /api/logs/:id
 DELETE /api/logs/:id
 ```
-
-## License
-
-MIT License - see LICENSE file for details
-
-## Contact
-
-Alejandro Paños - (https://github.com/AlejandroPanos)
-
-Project Link: [https://github.com/yourusername/glucotrack](https://github.com/yourusername/glucotrack)

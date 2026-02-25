@@ -29,11 +29,6 @@ app.use(
   }),
 );
 
-/* Health check */
-app.get((req, res) => {
-  res.status(200).json({ status: ok });
-});
-
 /* Use routes */
 app.use(checkUser);
 app.use("/api/auth", authRoutes);
