@@ -10,6 +10,7 @@ import ErrorComp from "../states/ErrorComp";
 const UsersList = () => {
   const queryClient = useQueryClient();
   const [pendingDeleteId, setPendingDeleteId] = useState(null);
+  const [deleteBlocked, setDeleteBlocked] = useState(false);
 
   const deleteUserMutation = useMutation({
     mutationFn: deleteUser,
@@ -31,12 +32,22 @@ const UsersList = () => {
   };
 
   const confirmDelete = () => {
+    const userToDelete = usersQuery.data.find((u) => u._id === pendingDeleteId);
+    const isAdmin = userToDelete?.role === "admin";
+    const adminCount = usersQuery.data.filter((u) => u.role === "admin").length;
+
+    if (isAdmin && adminCount === 1) {
+      setDeleteBlocked(true);
+      return;
+    }
+
     deleteUserMutation.mutate(pendingDeleteId);
     setPendingDeleteId(null);
   };
 
   const cancelDelete = () => {
     setPendingDeleteId(null);
+    setDeleteBlocked(false);
   };
 
   if (usersQuery.isPending) {
@@ -130,25 +141,44 @@ const UsersList = () => {
           onClick={cancelDelete}
         >
           <div
-            className="bg-gray-50 rounded-lg shadow-lg p-6 w-full max-w-sm mx-4 flex flex-col gap-4"
+            className="bg-white rounded-xl shadow-lg p-6 w-full max-w-sm mx-4 flex flex-col gap-4"
             onClick={(e) => e.stopPropagation()}
           >
-            <h2 className="text-lg font-semibold text-gray-800">Delete user?</h2>
-            <p className="text-gray-500 text-sm">This action cannot be undone.</p>
-            <div className="flex justify-end gap-3">
-              <button
-                onClick={cancelDelete}
-                className="px-4 py-2 text-sm rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 transition-colors"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={confirmDelete}
-                className="px-4 py-2 text-sm rounded-lg bg-red-500 text-white hover:bg-red-600 transition-colors"
-              >
-                Delete
-              </button>
-            </div>
+            {deleteBlocked ? (
+              <>
+                <h2 className="text-lg font-semibold text-gray-800">Cannot delete admin</h2>
+                <p className="text-gray-500 text-sm">
+                  There must be at least one admin. Assign another admin before deleting this user.
+                </p>
+                <div className="flex justify-end">
+                  <button
+                    onClick={cancelDelete}
+                    className="px-4 py-2 text-sm rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 transition-colors"
+                  >
+                    Got it
+                  </button>
+                </div>
+              </>
+            ) : (
+              <>
+                <h2 className="text-lg font-semibold text-gray-800">Delete user?</h2>
+                <p className="text-gray-500 text-sm">This action cannot be undone.</p>
+                <div className="flex justify-end gap-3">
+                  <button
+                    onClick={cancelDelete}
+                    className="px-4 py-2 text-sm rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 transition-colors"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    onClick={confirmDelete}
+                    className="px-4 py-2 text-sm rounded-lg bg-red-500 text-white hover:bg-red-600 transition-colors"
+                  >
+                    Delete
+                  </button>
+                </div>
+              </>
+            )}
           </div>
         </div>
       )}
