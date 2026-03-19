@@ -4,8 +4,8 @@ import { format } from "date-fns";
 import { ArrowLeft, Edit, Trash2 } from "lucide-react";
 
 import { getMeal, deleteMeal } from "../../helpers/helpers";
-import Loading from "../states/Loading";
-import ErrorComp from "../states/ErrorComp";
+import Loading from "../feedback/Loading";
+import ErrorComp from "../feedback/ErrorComp";
 
 const MealView = () => {
   const { id } = useParams();

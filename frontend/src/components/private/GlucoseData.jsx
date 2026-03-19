@@ -2,8 +2,8 @@ import { useQuery } from "@tanstack/react-query";
 import { userLogs } from "../../helpers/helpers";
 
 import { useAuth } from "../../hooks/useAuth";
-import Loading from "../states/Loading";
-import ErrorComp from "../states/ErrorComp";
+import Loading from "../feedback/Loading";
+import ErrorComp from "../feedback/ErrorComp";
 
 const GlucoseData = () => {
   const { user } = useAuth();
@@ -27,7 +27,7 @@ const GlucoseData = () => {
   const estimatedHbA1c = parseFloat(((averageGlucose + 46.7) / 28.7).toFixed(1));
   const logsInRange = logsQuery.data.logs.filter(
     (log) =>
-      log.glucoseLevel >= user.targetGlucose.min && log.glucoseLevel <= user.targetGlucose.max
+      log.glucoseLevel >= user.targetGlucose.min && log.glucoseLevel <= user.targetGlucose.max,
   ).length;
   const percentageInRange = ((logsInRange / totalLogs) * 100).toFixed(1);
 

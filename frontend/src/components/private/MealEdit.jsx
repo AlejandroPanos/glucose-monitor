@@ -3,8 +3,8 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { ArrowLeft } from "lucide-react";
 
 import { editMeal, getMeal } from "../../helpers/helpers";
-import Loading from "../states/Loading";
-import ErrorComp from "../states/ErrorComp";
+import Loading from "../feedback/Loading";
+import ErrorComp from "../feedback/ErrorComp";
 
 const MealEdit = () => {
   const { id } = useParams();

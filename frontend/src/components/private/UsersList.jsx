@@ -4,8 +4,8 @@ import { useQueryClient } from "@tanstack/react-query";
 import { Trash2 } from "lucide-react";
 
 import { getUsers, deleteUser } from "../../helpers/helpers";
-import Loading from "../states/Loading";
-import ErrorComp from "../states/ErrorComp";
+import Loading from "../feedback/Loading";
+import ErrorComp from "../feedback/ErrorComp";
 
 const UsersList = () => {
   const queryClient = useQueryClient();

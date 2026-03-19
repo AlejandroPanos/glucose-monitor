@@ -2,7 +2,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 import { deleteMeal } from "../../helpers/helpers";
 import MealCard from "./MealCard";
-import Empty from "../states/Empty";
+import Empty from "../feedback/Empty";
 
 const MealsGrid = ({ meals }) => {
   const queryClient = useQueryClient();

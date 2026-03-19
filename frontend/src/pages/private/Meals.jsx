@@ -6,8 +6,8 @@ import PageBar from "../../components/private/PageBar";
 import PageHeader from "../../components/private/PageHeader";
 import MealsGrid from "../../components/private/MealsGrid";
 import PaginationButtons from "../../components/private/PaginationButtons";
-import Loading from "../../components/states/Loading";
-import ErrorComp from "../../components/states/ErrorComp";
+import Loading from "../../components/feedback/Loading";
+import ErrorComp from "../../components/feedback/ErrorComp";
 
 const Meals = () => {
   const [currentPage, setCurrentPage] = useState(1);

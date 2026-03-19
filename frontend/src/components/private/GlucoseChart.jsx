@@ -11,9 +11,9 @@ import {
 } from "recharts";
 import { userLogs } from "../../helpers/helpers";
 
-import Loading from "../states/Loading";
-import ErrorComp from "../states/ErrorComp";
-import Empty from "../states/Empty";
+import Loading from "../feedback/Loading";
+import ErrorComp from "../feedback/ErrorComp";
+import Empty from "../feedback/Empty";
 
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {

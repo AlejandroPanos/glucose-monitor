@@ -2,7 +2,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 import { deleteLog } from "../../helpers/helpers";
 import LogCard from "./LogCard";
-import Empty from "../states/Empty";
+import Empty from "../feedback/Empty";
 
 const LogsGrid = ({ logs }) => {
   const queryClient = useQueryClient();

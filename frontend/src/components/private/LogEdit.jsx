@@ -4,8 +4,8 @@ import { format } from "date-fns";
 import { ArrowLeft } from "lucide-react";
 
 import { editLog, getLog, userMeals } from "../../helpers/helpers";
-import Loading from "../states/Loading";
-import ErrorComp from "../states/ErrorComp";
+import Loading from "../feedback/Loading";
+import ErrorComp from "../feedback/ErrorComp";
 
 const LogEdit = () => {
   const { id } = useParams();
@@ -182,8 +182,8 @@ const LogEdit = () => {
                     {mealsQuery.isPending
                       ? "Loading meals..."
                       : mealsQuery.isError
-                      ? "Error loading meals"
-                      : "Select a meal"}
+                        ? "Error loading meals"
+                        : "Select a meal"}
                   </option>
 
                   {mealsQuery.data &&
