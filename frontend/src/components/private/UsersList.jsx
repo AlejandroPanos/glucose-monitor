@@ -130,7 +130,7 @@ const UsersList = () => {
           onClick={cancelDelete}
         >
           <div
-            className="bg-white rounded-xl shadow-lg p-6 w-full max-w-sm mx-4 flex flex-col gap-4"
+            className="bg-gray-50 rounded-lg shadow-lg p-6 w-full max-w-sm mx-4 flex flex-col gap-4"
             onClick={(e) => e.stopPropagation()}
           >
             <h2 className="text-lg font-semibold text-gray-800">Delete user?</h2>
