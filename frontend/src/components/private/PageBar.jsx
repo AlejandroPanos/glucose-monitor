@@ -2,7 +2,6 @@ import { Link } from "react-router";
 import { useAuth } from "../../hooks/useAuth";
 
 import { Plus } from "lucide-react";
-import user from "../../images/user.jpg";
 
 const PageBar = () => {
   const { user } = useAuth();

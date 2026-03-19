@@ -1,4 +1,4 @@
-import laptop from "../../../images/laptop.png";
+import laptop from "../../../assets/laptop.png";
 
 const DashboardSection = () => {
   return (

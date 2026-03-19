@@ -1,10 +1,10 @@
 import { Link } from "react-router";
 import { ArrowRight } from "lucide-react";
 
-import placeholderOne from "../../../images/placeholderOne.svg";
-import placeholderTwo from "../../../images/placeholderTwo.svg";
-import placeholderThree from "../../../images/placeholderThree.svg";
-import placeholderFour from "../../../images/placeholderFour.svg";
+import placeholderOne from "../../../assets/placeholderOne.svg";
+import placeholderTwo from "../../../assets/placeholderTwo.svg";
+import placeholderThree from "../../../assets/placeholderThree.svg";
+import placeholderFour from "../../../assets/placeholderFour.svg";
 
 const HeroSection = () => {
   const placeholders = [placeholderOne, placeholderTwo, placeholderThree, placeholderFour];

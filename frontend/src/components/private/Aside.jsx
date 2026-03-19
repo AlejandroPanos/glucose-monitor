@@ -17,7 +17,7 @@ import {
   Users,
 } from "lucide-react";
 
-import logo from "../../images/logo.svg";
+import logo from "../../assets/logo.svg";
 
 const Aside = ({ close, setClose }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
