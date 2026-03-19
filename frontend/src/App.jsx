@@ -7,22 +7,22 @@ import DashboardLayout from "./layouts/DashboardLayout";
 import PublicLayout from "./layouts/PublicLayout";
 
 // Public Pages
-import Home from "./pages/public/Home";
-import Register from "./pages/public/Register";
-import Login from "./pages/public/Login";
+import Home from "./landing/Home";
+import Register from "./features/auth/pages/Register";
+import Login from "./features/auth/pages/Login";
 
 // Private Pages
-import Dashboard from "./pages/private/Dashboard";
-import Meals from "./pages/private/Meals";
-import Logs from "./pages/private/Logs";
-import Meal from "./pages/private/Meal";
-import Log from "./pages/private/Log";
-import EditMeal from "./pages/private/EditMeal";
-import EditLog from "./pages/private/EditLog";
-import AddMeal from "./pages/private/AddMeal";
-import AddLog from "./pages/private/AddLog";
-import Settings from "./pages/private/Settings";
-import Users from "./pages/private/Users";
+import Dashboard from "./features/dashboard/pages/Dashboard";
+import Meals from "./features/meals/pages/Meals";
+import Logs from "./features/glucoselogs/pages/Logs";
+import Meal from "./features/meals/pages/Meal";
+import Log from "./features/glucoselogs/pages/Log";
+import EditMeal from "./features/meals/pages/EditMeal";
+import EditLog from "./features/glucoselogs/pages/EditLog";
+import AddMeal from "./features/meals/pages/AddMeal";
+import AddLog from "./features/glucoselogs/pages/AddLog";
+import Settings from "./features/settings/pages/Settings";
+import Users from "./features/users/pages/Users";
 
 // Route checkers
 import PublicRoute from "./components/routes/PublicRoute";

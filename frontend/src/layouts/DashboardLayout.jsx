@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Outlet } from "react-router";
-import Aside from "../components/private/Aside";
+import Aside from "../components/ui/Aside";
 
 const DashboardLayout = () => {
   const [asideClose, setAsideClose] = useState(false);
