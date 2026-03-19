@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { useQueryClient } from "@tanstack/react-query";
 import { Trash2 } from "lucide-react";
@@ -8,6 +9,7 @@ import ErrorComp from "../states/ErrorComp";
 
 const UsersList = () => {
   const queryClient = useQueryClient();
+  const [pendingDeleteId, setPendingDeleteId] = useState(null);
 
   const deleteUserMutation = useMutation({
     mutationFn: deleteUser,
@@ -25,9 +27,16 @@ const UsersList = () => {
   });
 
   const handleDelete = (id) => {
-    if (window.confirm("Are you sure you want to delete this user?")) {
-      deleteUserMutation.mutate(id);
-    }
+    setPendingDeleteId(id);
+  };
+
+  const confirmDelete = () => {
+    deleteUserMutation.mutate(pendingDeleteId);
+    setPendingDeleteId(null);
+  };
+
+  const cancelDelete = () => {
+    setPendingDeleteId(null);
   };
 
   if (usersQuery.isPending) {
@@ -113,6 +122,36 @@ const UsersList = () => {
           ))}
         </div>
       </div>
+
+      {/* Confirmation Modal */}
+      {pendingDeleteId && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/40"
+          onClick={cancelDelete}
+        >
+          <div
+            className="bg-white rounded-xl shadow-lg p-6 w-full max-w-sm mx-4 flex flex-col gap-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2 className="text-lg font-semibold text-gray-800">Delete user?</h2>
+            <p className="text-gray-500 text-sm">This action cannot be undone.</p>
+            <div className="flex justify-end gap-3">
+              <button
+                onClick={cancelDelete}
+                className="px-4 py-2 text-sm rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 transition-colors"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={confirmDelete}
+                className="px-4 py-2 text-sm rounded-lg bg-red-500 text-white hover:bg-red-600 transition-colors"
+              >
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };
