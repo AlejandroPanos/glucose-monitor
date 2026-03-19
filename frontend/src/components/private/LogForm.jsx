@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 import { addLog, userMeals } from "../../helpers/helpers";
 
 const LogForm = () => {
+  const today = new Date().toISOString().split("T")[0];
   const navigate = useNavigate();
 
   const logMutation = useMutation({
@@ -97,7 +98,8 @@ const LogForm = () => {
             type="date"
             name="date"
             id="date"
-            defaultValue={new Date().toISOString().split("T")[0]}
+            defaultValue={today}
+            max={today}
             className="w-full px-4 py-3 rounded-xl border border-gray-300 bg-white shadow-sm text-gray-900 hover:cursor-text focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             required
           />
@@ -122,8 +124,8 @@ const LogForm = () => {
                 {mealsQuery.isPending
                   ? "Loading meals..."
                   : mealsQuery.isError
-                  ? "Error loading meals"
-                  : "Select a meal"}
+                    ? "Error loading meals"
+                    : "Select a meal"}
               </option>
 
               {mealsQuery.data &&
