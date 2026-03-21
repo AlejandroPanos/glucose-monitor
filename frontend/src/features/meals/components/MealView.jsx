@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useParams, Link, useNavigate } from "react-router";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { format } from "date-fns";
@@ -11,6 +12,7 @@ const MealView = () => {
   const { id } = useParams();
   const queryClient = useQueryClient();
   const navigate = useNavigate();
+  const [pendingDeleteId, setPendingDeleteId] = useState(null);
 
   const mealQuery = useQuery({
     queryKey: ["meal", id],
@@ -37,9 +39,16 @@ const MealView = () => {
   }
 
   const handleDelete = (id) => {
-    if (window.confirm("Are you sure you want to delete this meal?")) {
-      deleteMealMutation.mutate(id);
-    }
+    setPendingDeleteId(id);
+  };
+
+  const confirmDelete = () => {
+    deleteMealMutation.mutate(pendingDeleteId);
+    setPendingDeleteId(null);
+  };
+
+  const cancelDelete = () => {
+    setPendingDeleteId(null);
   };
 
   return (
@@ -109,6 +118,36 @@ const MealView = () => {
           </div>
         </div>
       </div>
+
+      {/* Confirmation Modal */}
+      {pendingDeleteId && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/40"
+          onClick={cancelDelete}
+        >
+          <div
+            className="bg-white rounded-xl shadow-lg p-6 w-full max-w-sm mx-4 flex flex-col gap-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2 className="text-lg font-semibold text-gray-800">Delete meal?</h2>
+            <p className="text-gray-500 text-sm">This action cannot be undone.</p>
+            <div className="flex justify-end gap-3">
+              <button
+                onClick={cancelDelete}
+                className="px-4 py-2 text-sm rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 transition-colors"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={confirmDelete}
+                className="px-4 py-2 text-sm rounded-lg bg-red-500 text-white hover:bg-red-600 transition-colors"
+              >
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };
