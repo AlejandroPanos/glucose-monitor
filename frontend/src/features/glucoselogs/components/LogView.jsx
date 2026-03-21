@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useParams, Link, useNavigate } from "react-router";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { format } from "date-fns";
@@ -6,11 +7,13 @@ import { ArrowLeft, Edit, Trash2 } from "lucide-react";
 import { getLog, deleteLog } from "../../../helpers/helpers";
 import Loading from "../../../components/feedback/Loading";
 import ErrorComp from "../../../components/feedback/ErrorComp";
+import ConfirmationModal from "../../../components/ui/ConfirmationModal";
 
 const LogView = () => {
   const { id } = useParams();
   const queryClient = useQueryClient();
   const navigate = useNavigate();
+  const [pendingDeleteId, setPendingDeleteId] = useState(null);
 
   const logQuery = useQuery({
     queryKey: ["log", id],
@@ -37,9 +40,16 @@ const LogView = () => {
   }
 
   const handleDelete = (id) => {
-    if (window.confirm("Are you sure you want to delete this log?")) {
-      deleteLogMutation.mutate(id);
-    }
+    setPendingDeleteId(id);
+  };
+
+  const confirmDelete = () => {
+    deleteLogMutation.mutate(pendingDeleteId);
+    setPendingDeleteId(null);
+  };
+
+  const cancelDelete = () => {
+    setPendingDeleteId(null);
   };
 
   return (
@@ -121,6 +131,11 @@ const LogView = () => {
           </div>
         </div>
       </div>
+
+      {/* Confirmation Modal */}
+      {pendingDeleteId && (
+        <ConfirmationModal action="Delete log?" mutation={confirmDelete} cancel={cancelDelete} />
+      )}
     </>
   );
 };
