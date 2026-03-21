@@ -34,13 +34,15 @@ const Logs = () => {
         {logsQuery.data && (
           <>
             <LogsGrid logs={logsQuery.data.logs} />
-            <PaginationButtons
-              currentPage={logsQuery.data.pagination.currentPage}
-              totalPages={logsQuery.data.pagination.totalPages}
-              hasNextPage={logsQuery.data.pagination.hasNextPage}
-              hasPrevPage={logsQuery.data.pagination.hasPrevPage}
-              onPageChange={handlePageChange}
-            />
+            {logsQuery.data.logs.length > 0 && (
+              <PaginationButtons
+                currentPage={logsQuery.data.pagination.currentPage}
+                totalPages={logsQuery.data.pagination.totalPages}
+                hasNextPage={logsQuery.data.pagination.hasNextPage}
+                hasPrevPage={logsQuery.data.pagination.hasPrevPage}
+                onPageChange={handlePageChange}
+              />
+            )}
           </>
         )}
       </div>

@@ -34,13 +34,15 @@ const Meals = () => {
         {mealsQuery.data && (
           <>
             <MealsGrid meals={mealsQuery.data.meals} />
-            <PaginationButtons
-              currentPage={mealsQuery.data.pagination.currentPage}
-              totalPages={mealsQuery.data.pagination.totalPages}
-              hasNextPage={mealsQuery.data.pagination.hasNextPage}
-              hasPrevPage={mealsQuery.data.pagination.hasPrevPage}
-              onPageChange={handlePageChange}
-            />
+            {mealsQuery.data.meals.length > 0 && (
+              <PaginationButtons
+                currentPage={mealsQuery.data.pagination.currentPage}
+                totalPages={mealsQuery.data.pagination.totalPages}
+                hasNextPage={mealsQuery.data.pagination.hasNextPage}
+                hasPrevPage={mealsQuery.data.pagination.hasPrevPage}
+                onPageChange={handlePageChange}
+              />
+            )}
           </>
         )}
       </div>
